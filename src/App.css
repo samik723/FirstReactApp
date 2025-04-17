@@ -1,0 +1,175 @@
+/* General page styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8; /* Light background */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  flex-direction: column;
+}
+
+/* Overall Container to Center Everything */
+.app-container {
+  width: 100%;
+  max-width: 1200px; /* Optional: Limit width for larger screens */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+.header {
+  background-color: #3b5998; /* Dark blue */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Navbar Styling (Search Bar) */
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the search bar */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.navbar input {
+  padding: 12px;
+  width: 100%;
+  max-width: 500px; /* Max width for the search bar */
+  border-radius: 5px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  transition: border 0.3s;
+}
+
+.navbar input:focus {
+  border-color: #3b5998; /* Blue border on focus */
+}
+
+/* Task input section */
+.task-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-input input {
+  padding: 12px;
+  width: 80%;
+  max-width: 500px; /* Make input the same width as search bar */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-task-btn,
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  max-width: 150px; /* Ensure button doesn't stretch */
+}
+
+button:hover,
+.add-task-btn:hover {
+  background-color: #218838;
+}
+
+/* Task Table Styling */
+.task-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.task-table th,
+.task-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.task-table th {
+  background-color: #3b5998;
+  color: white;
+  font-size: 18px;
+}
+
+.task-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.task-actions button {
+  background-color: #007bff;
+  margin-right: 10px;
+}
+
+.task-actions button:hover {
+  background-color: #0056b3;
+}
+
+.task-actions button.delete-btn {
+  background-color: #dc3545;
+}
+
+.task-actions button.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* No tasks message */
+.no-tasks-message {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-input {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .task-input input,
+  .navbar input {
+    width: 100%;
+  }
+
+  .task-table {
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
